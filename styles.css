@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+}
+/*Web Container (Padre)*/
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+/*Header Container (Hijo 1)*/
+.header {
+  background: #000000;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.menu {
+  background: #4b3869;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.logo {
+  background: #63b4b8;
+  height: 30px;
+  flex: 1 1 auto;
+}
+.header-nav {
+  background: #63b4b8;
+  height: 30px;
+  flex: 5 1 auto;
+}
+.social {
+  background: #63b4b8;
+  height: 30px;
+  flex: 1 1 auto;
+}
+.hero {
+  background: #664e88;
+}
+h1 {
+  background: #a9e4d7;
+}
+/*Section Container (Hijo 2)*/
+.section {
+  background: #000000;
+  display: flex;
+}
+.articles {
+  background: #316b83;
+  flex: 2 1 auto; /*propiedad x ser hijo de section*/
+  display: flex; /*propiedad x ser padre de each-article*/
+  flex-flow: row wrap;
+}
+.each-article {
+  background: #8ca1a5;
+  flex: 1 1 40%;
+}
+.section-nav{
+  background: #FEFBF3;
+  flex: 1 1 100%;
+}
+.aside{
+  background:#6D8299;
+  flex: 1 1 auto;
+}
+.pulicity{
+  background:#D5BFBF;
+}
+/*Footer Container (Hijo 3)*/
+.footer {
+  background: #000000;
+  display: flex;
+  justify-content: center;
+}
+.footer-nav{
+  background: #B5DEFF;
+  width: 300px;
+}
+/*Media Query*/
+/* de cero a 400 px va a tener los siguientes estilos: */
+.aside{
+  flex-direction: column;
+}
+
+
+/* de cero a 600 px va a tener los siguientes estilos: */
+@media all and (max-width:600px){
+
+  .each-article{
+  flex-direction: column;
+}
+}
+/* de 600 a 768 px va a tener los siguientes estilos: */
+@media all and (max-width:768px){
+
+.menu{
+   flex-direction: column;
+   height: auto;
+}
+.section{
+  flex-direction: column;
+}
+.aside{
+  display: flex;
+  justify-content: center;
+}
+}
